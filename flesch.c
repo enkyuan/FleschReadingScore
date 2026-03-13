@@ -11,7 +11,7 @@
 int countSentences(const char* text) {
     // TODO: Implement this function
 	int sentences = 0;
-	char* ptr = text;
+	const char* ptr = text;
 
 	while (*ptr) {
 		if (*ptr == '.' || *ptr == ':' || *ptr == ';' || 
@@ -29,7 +29,7 @@ int countWords(const char* text) {
     // TODO: Implement this function
 	int words = 0;
 	bool inWord = false;
-	char* ptr = text;
+	const char* ptr = text;
 	
 	while (*ptr) {
 		bool isDelimiter = isspace(*ptr) || (*ptr == '.' || *ptr == ':' || *ptr == ';' || *ptr == '?' *ptr == '!');
@@ -51,7 +51,7 @@ int countSyllables(const char* text) {
     // TODO: Implement this function
 	int syllables = 0;
 	bool inVowelGroup = false;
-	char *ptr = text;  	
+	const char *ptr = text;  	
 	
 	while (*ptr) {
 		char c = tolower(*ptr);
