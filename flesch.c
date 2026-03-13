@@ -33,7 +33,7 @@ int countWords(const char* text) {
 	const char* ptr = text;
 	
 	while (*ptr) {
-		bool isDelimiter = isspace(*ptr) || (*ptr == '.' || *ptr == ':' || *ptr == ';' || *ptr == '?' *ptr == '!');
+		bool isDelimiter = isspace(*ptr) || (*ptr == '.' || *ptr == ':' || *ptr == ';' || *ptr == '?' || *ptr == '!');
 
 		if (!isDelimiter && !inWord) {
 			inWord = true;
